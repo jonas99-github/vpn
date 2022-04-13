@@ -22,7 +22,7 @@ echo
   <li><a href='devices.php'>Networks</a></li>
  </ul>
  </div>
-
+<a href='sample.html'>link</a>
 <br><br><br>
  <div class='popup' onclick='myFunction()' style='margin-left:20px;'><button class='btn btn-info'>How to access?</button>
  <span class='popuptext' id='myPopup'>Run XAMPP. Enter into the search bar: 172.31.1.169:3030/vpn.<br>If cannot access, add 172.31.1.169 to the Firewall.</span>
