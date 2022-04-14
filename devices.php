@@ -21,26 +21,11 @@ body{
 <h3 style="text-align:center;"><a href="index.php">SSR Links</a><a href="devices.php">  Networks</a></h3><br>
 <h2>PING</h2>
 
-<audio id="myAudio" controls autoplay>
-  <source src="failed_conn.wav" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-
-<p id="demo"></p>
-
-<script>
-function failedConn(){
-  var x = document.getElementById("myAudio").autoplay;
-  document.getElementById("demo").innerHTML = x;
-}
-
-</script>
-
 <div class='testdiv'>
 <?php
 
 header("refresh: 1;");
-echo "ACCTG-SERVER";
+echo "ACCOUNTING SHARED";
 
 //$websites = array("google.com", "172.31.1.132", "8.8.8.8");
 $good = "Received = 1";
@@ -72,17 +57,15 @@ $command = "ping -n 1 172.31.1.138";
 $ping = shell_exec($command);;
    
 if(strpos($ping, $good)){
-    echo "Computer is <strong>ONLINE</strong> 
+    echo "<strong style='color:green;'>CONNECTED</strong> 
     ";
-   
 }
 else {
     echo "Computer is <strong style='color:red' >OFFLINE</strong>";
     echo " 
             
-            window.onload=failedConn();
+           
             <script type='text/javascript'>
-              window.onload=failedConn();
               $(window).on('load', function() {
               $('#voiceModal').modal('show');
               });
@@ -95,10 +78,10 @@ $command3 = "ping -n 1 google.com";
 $ping3 = shell_exec($command3);
    
 if(strpos($ping3, $good)){
-    echo "This computer has <strong>INTERNET ACCESS.</strong>";
+    echo "<strong style='color:green;'>CONNECTED</strong>";
 }
 else {
-    echo "<strong style='color:red' >Failed to connect to GOOGLE.COM.</strong>";
+    echo "<strong style='color:red;' >Failed to connect to GOOGLE.COM.</strong>";
     echo "
             <script type='text/javascript'>
               $(window).on('load', function() {
@@ -113,7 +96,7 @@ $command4 = "ping -n 1 172.31.1.1";
 $ping4 = shell_exec($command4);
    
 if(strpos($ping4, $good)){
-    echo "Computer is <strong>ONLINE</strong>";
+    echo "<strong style='color:green;'>CONNECTED</strong>";
 }
 else {
     echo "Computer is <strong style='color:red' >OFFLINE</strong>";
@@ -135,17 +118,18 @@ echo "</pre>";
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">WARNING!</h5>
+        <h5 class="modal-title" id="exampleModalLabel"></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
-      <strong>Failed to connect.</strong>
+      <div class="modal-body" style="text-align:center;">
+      <strong style="color: red;">Connection Failed</strong><br>
+      
+
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        
       </div>
     </div>
   </div>
