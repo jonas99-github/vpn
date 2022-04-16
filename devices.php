@@ -13,12 +13,12 @@
 <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js'></script>
 <style>
 body{
-    background-color:#DCDCDC;
+    
 }
 </style>
 </head>
 <body>
-<h3 style="text-align:center;"><a href="index.php">SSR Links</a><a href="devices.php">  Networks</a></h3><br>
+<h3 style="text-align:center;"><a href="index.php">SSR Links</a><a href="devices.php">  Networks</a></h3>
 <h2>PING</h2>
 
 <div class='testdiv'>
@@ -61,11 +61,8 @@ if(strpos($ping, $good)){
     ";
 }
 else {
-    echo "Computer is <strong style='color:red' >OFFLINE</strong>";
-    echo " 
-            
-           
-            <script type='text/javascript'>
+    echo "<strong style='color:red' >OFFLINE</strong>";
+    echo "<script type='text/javascript'>
               $(window).on('load', function() {
               $('#voiceModal').modal('show');
               });
@@ -73,7 +70,7 @@ else {
 }
 
 echo "</pre>";
-echo "<br>GOOGLE.COM <br><br><br><pre>";
+echo "<br>Google(172.217.27.14) <br><br><br><pre>";
 $command3 = "ping -n 1 google.com";
 $ping3 = shell_exec($command3);
    
@@ -82,8 +79,7 @@ if(strpos($ping3, $good)){
 }
 else {
     echo "<strong style='color:red;' >Failed to connect to GOOGLE.COM.</strong>";
-    echo "
-            <script type='text/javascript'>
+    echo "<script type='text/javascript'>
               $(window).on('load', function() {
               $('#voiceModal').modal('show');
               });
@@ -100,15 +96,30 @@ if(strpos($ping4, $good)){
 }
 else {
     echo "Computer is <strong style='color:red' >OFFLINE</strong>";
-    echo "
-            <script type='text/javascript'>
+    echo "<script type='text/javascript'>
               $(window).on('load', function() {
               $('#voiceModal').modal('show');
               });
             </script>";
 }
 echo "</pre>";
- 
+
+echo "<br>MAKATI-PC<br><br><br><pre>";
+$command5 = "ping -n 1 172.31.1.184";
+$ping5 = shell_exec($command5);
+   
+if(strpos($ping5, $good)){
+    echo "<strong style='color:green;'>CONNECTED</strong>";
+}
+else {
+    echo "<strong style='color:red;'>OFFLINE</strong>";
+    echo "<script type='text/javascript'>
+              $(window).on('load', function() {
+              $('#voiceModal').modal('show');
+              });
+            </script>";
+}
+echo "</pre>";
 /*https://youtu.be/HS95229Z0Yw */
 
 ?>
@@ -135,7 +146,7 @@ echo "</pre>";
   </div>
 </div>
 
-
+<div class='footer'><div style='margin-top:6px; font-size: 11px;'>Gemotech Inc. © 2022</div></div>
 </body>
 </html>
 
