@@ -104,8 +104,8 @@ else {
 }
 echo "</pre>";
 
-echo "<br>MAKATI-PC<br><br><br><pre>";
-$command5 = "ping -n 1 172.31.1.184";
+echo "<br>MAKATI-PC<br>Notification:off<br><br><pre>";
+$command5 = "ping -n 1 172.31.1.125";
 $ping5 = shell_exec($command5);
    
 if(strpos($ping5, $good)){
@@ -113,14 +113,16 @@ if(strpos($ping5, $good)){
 }
 else {
     echo "<strong style='color:red;'>OFFLINE</strong>";
-    echo "<script type='text/javascript'>
+    /*echo "<script type='text/javascript'>
               $(window).on('load', function() {
               $('#voiceModal').modal('show');
               });
-            </script>";
+            </script>"; */
 }
 echo "</pre>";
 /*https://youtu.be/HS95229Z0Yw */
+
+echo system("pwsh -File test.ps1");
 
 ?>
 
