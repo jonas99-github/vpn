@@ -122,9 +122,9 @@ else {
 echo "</pre>";
 /*https://youtu.be/HS95229Z0Yw */
 
-echo system("pwsh -File test.ps1");
 
 ?>
+
 
 <!-- Modal -->
 <div class="modal fade" id="voiceModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color:Black;">

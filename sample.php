@@ -1,8 +1,7 @@
-<html>
-    <body>
-        <audio controls autoplay>
-  <source src="sample.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
-</body>
-</html>
+<?php
+header("refresh: 1;");
+echo "<pre><strong>";
+echo Shell_Exec('powershell -InputFormat none -ExecutionPolicy ByPass -NoProfile -Command "& { . \"C:\xampp\htdocs\vpn\test.ps1\"; }"');
+echo "</strong></pre>";
+
+?>
