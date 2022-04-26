@@ -18,7 +18,7 @@ body{
 </style>
 </head>
 <body>
-<h3 style="text-align:center;"><a href="index.php">SSR Links</a><a href="devices.php">  Networks</a></h3>
+<h3 style="text-align:center;"><a href="index.php">SSR Links</a><a href="devices.php">  Networks</a><a href="vpn.php"> VPN</a></h3>
 <h2>PING</h2>
 
 <div class='testdiv'>
@@ -54,7 +54,7 @@ echo "<br><br><br><pre>";
 
 $command = "ping -n 1 172.31.1.138";
 
-$ping = shell_exec($command);;
+$ping = shell_exec($command);
    
 if(strpos($ping, $good)){
     echo "<strong style='color:green;'>CONNECTED</strong> 
