@@ -22,33 +22,23 @@ header("refresh: 1;"); ?>
     <tr>
         <th>IP Address</th>
         <th>TCP</th>
-        <th>UDP</th>
+        <th></th>
         
     </tr>
     <tr>
     <td>210.209.125.34</td>
     <td>
     <?php 
-    $tcpRes = "true";
+    $tcpRes = "True";
     $tcpstatus = 'powershell -InputFormat none -ExecutionPolicy ByPass -NoProfile -Command "& { . \"C:\xampp\htdocs\vpn\test.ps1\"; }"';
-    $result = shell_exec($tcpstatus);
-  //echo json_encode($result);
-  $a = True;
-  echo "0: " .(boolval(0) ? 'true' : 'false') . "<br>";
-  echo $result;
- 
-  /*
-    if($result == True){
-    echo "<strong style='color:green;'>Connected</strong>";    
-    }
-    else{
-        echo "<strong style='color:red;'>Failed</strong>"; 
-    }
-    */
-  //  else{
-      //  $tcpRes = "Failed";
-  //  }
-   
+    $result = " this is a result " . shell_exec($tcpstatus);
+
+  if(strpos($result,  $tcpRes)){
+    echo "<strong style='color:green;'>Connected</strong>";
+  }
+  else{
+    echo "<strong style='color:red;'>Failed</strong>";
+  }
     ?>
     </td>
 </tr>
@@ -56,9 +46,16 @@ header("refresh: 1;"); ?>
 <td>123.1.189.100</td>
     <td>
     <?php 
-    $tcpRes2 = "True";
-    $tcpstatus2 = Shell_Exec('powershell -InputFormat none -ExecutionPolicy ByPass -NoProfile -Command "& { . \"C:\xampp\htdocs\vpn\test2.ps1\"; }"');
- echo "<strong style='color:green;'>" . $tcpstatus2 . "</strong>";
+
+    $tcpstatus2 = 'powershell -InputFormat none -ExecutionPolicy ByPass -NoProfile -Command "& { . \"C:\xampp\htdocs\vpn\test2.ps1\"; }"';
+    $result2 = " this is a result " . shell_exec($tcpstatus2) ;
+
+ if(strpos($result2,  $tcpRes)){
+  echo "<strong style='color:green;'>Connected</strong>";
+}
+else{
+  echo "<strong style='color:red;'>Failed</strong>";
+}
  ?>
  </td>
   </tr>

@@ -1,7 +1,8 @@
 <?php
-header("refresh: 1;");
-echo "<pre><strong>";
-echo Shell_Exec('powershell -InputFormat none -ExecutionPolicy ByPass -NoProfile -Command "& { . \"C:\xampp\htdocs\vpn\test.ps1\"; }"');
-echo "</strong></pre>";
+//the error
+$tcpstatus2 = Shell_Exec('powershell -InputFormat none -ExecutionPolicy ByPass -NoProfile -Command "& { . \"C:\xampp\htdocs\vpn\test2.ps1\"; }"');
+$result2 = " this is a result " . shell_exec($tcpstatus2) ;
+echo $result2;
+
 
 ?>
