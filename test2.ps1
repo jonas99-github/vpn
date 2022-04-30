@@ -1,2 +1,2 @@
-Test-NetConnection -Port 3389 -InformationLevel "Quiet" 123.1.189.100
+Test-NetConnection -Port 3389 -InformationLevel "Quiet" 103.42.58.64
 

@@ -52,7 +52,7 @@ foreach ($websites as $url){
 }*/
 echo "<br><br><br><pre>";
 
-$command = "ping -n 1 172.31.1.138";
+$command = "ping -n 1 172.31.1.177";
 
 $ping = shell_exec($command);
    
