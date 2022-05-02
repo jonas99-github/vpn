@@ -120,7 +120,6 @@ else {
             </script>"; */
 }
 echo "</pre>";
-/*https://youtu.be/HS95229Z0Yw */
 
 
 ?>

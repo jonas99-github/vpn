@@ -39,80 +39,73 @@ header("refresh: 1;"); ?>
         <th>Actions</th>
     </tr>
     <tr>
-    <td>210.209.125.34</td>
-    <td>3389</td>
-    <td>
-    <?php 
-    $tcpRes = "True";
-    $tcpstatus = 'powershell -InputFormat none -ExecutionPolicy ByPass -NoProfile -Command "& { . \"C:\xampp\htdocs\vpn\test.ps1\"; }"';
-    $result = " this is a result " . shell_exec($tcpstatus);
+      <td>210.209.125.34</td>
+      <td>3389</td>
+      <td>
+        <?php 
+          $tcpRes = "True";
+          $tcpstatus = 'powershell -InputFormat none -ExecutionPolicy ByPass -NoProfile -Command "& { . \"C:\xampp\htdocs\vpn\test.ps1\"; }"';
+          $result = " this is a result " . shell_exec($tcpstatus);
 
-  if(strpos($result,  $tcpRes)){
-    echo "<strong style='color:green;'>Connected</strong>";
-  }
-  else{
-    echo "<strong style='color:red;'>Failed</strong>";
-  }
-    ?>
+          if(strpos($result,  $tcpRes)){
+            echo "<strong style='color:green;'>Connected</strong>";
+          }
+          else{
+          echo "<strong style='color:red;'>Failed</strong>";
+          }
+        ?>
     </td>
     <td></td>
     <td>
       <?php echo exec("ping -n 1 210.209.125.34"); ?>
-</td>
-<td><button class="btn btn-success">Edit</button><button class="btn btn-danger">Delete</button></td>
+    </td>
+    <td><button class="btn btn-success">Edit</button><button class="btn btn-danger">Delete</button></td>
 
-</tr>
-<tr>
-<td>103.42.58.64</td>
-<td>3389</td>
-    <td>
-    <?php 
+    </tr>
+    <tr>
+      <td>103.42.58.64</td>
+      <td>3389</td>
+      <td>
+        <?php 
+          $tcpstatus2 = 'powershell -InputFormat none -ExecutionPolicy ByPass -NoProfile -Command "& { . \"C:\xampp\htdocs\vpn\test2.ps1\"; }"';
+          $result2 = " this is a result " . shell_exec($tcpstatus2) ;
 
-    $tcpstatus2 = 'powershell -InputFormat none -ExecutionPolicy ByPass -NoProfile -Command "& { . \"C:\xampp\htdocs\vpn\test2.ps1\"; }"';
-    $result2 = " this is a result " . shell_exec($tcpstatus2) ;
-
- if(strpos($result2,  $tcpRes)){
-  echo "<strong style='color:green;'>Connected</strong>";
-}
-else{
-  echo "<strong style='color:red;'>Failed</strong>";
-}
+          if(strpos($result2,  $tcpRes)){
+            echo "<strong style='color:green;'>Connected</strong>";
+          }
+          else{
+            echo "<strong style='color:red;'>Failed</strong>";
+          }
  ?>
- </td>
- <td></td>
- <td>
-    <?php echo exec("ping -n 1 103.42.58.64"); ?>
-</td>
-<td><button class="btn btn-success">Edit</button><button class="btn btn-danger">Delete</button></td>
-  </tr>
-    
-  <tr>
-<td>123.1.189.100</td>
-<td>3389</td>
-    <td>
-    <?php 
-
-    $tcpstatus3 = 'powershell -InputFormat none -ExecutionPolicy ByPass -NoProfile -Command "& { . \"C:\xampp\htdocs\vpn\test3.ps1\"; }"';
-    $result3 = " this is a result " . shell_exec($tcpstatus3) ;
-
- if(strpos($result3,  $tcpRes)){
-  echo "<strong style='color:green;'>Connected</strong>";
-}
-else{
-  echo "<strong style='color:red;'>Failed</strong>";
-}
+      </td>
+      <td></td>
+      <td>
+        <?php echo exec("ping -n 1 103.42.58.64"); ?>
+      </td>
+      <td><button class="btn btn-success">Edit</button><button class="btn btn-danger">Delete</button></td>
+    </tr>  
+    <tr>
+      <td>123.1.189.100</td>
+      <td>3389</td>
+      <td>
+        <?php 
+          $tcpstatus3 = 'powershell -InputFormat none -ExecutionPolicy ByPass -NoProfile -Command "& { . \"C:\xampp\htdocs\vpn\test3.ps1\"; }"';
+          $result3 = " this is a result " . shell_exec($tcpstatus3) ;
+          if(strpos($result3,  $tcpRes)){
+            echo "<strong style='color:green;'>Connected</strong>";
+          }
+          else{
+            echo "<strong style='color:red;'>Failed</strong>";
+          }
  ?>
- </td>
- <td></td>
- <td>
-    <?php echo exec("ping -n 1 123.1.189.100"); ?>
-</td>
-<td><button class="btn btn-success">Edit</button><button class="btn btn-danger">Delete</button></td>
-
-  </tr>
-
+      </td>
+      <td></td>
+      <td>
+        <?php echo exec("ping -n 1 123.1.189.100"); ?>
+      </td>
+      <td><button class="btn btn-success">Edit</button><button class="btn btn-danger">Delete</button></td>
+    </tr>
 </table>
-
 </body>
 </html>
 
